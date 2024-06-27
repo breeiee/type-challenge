@@ -1,4 +1,5 @@
-type Last<T extends any[]> = T extends [...any, infer R] ? R : T;
+// type Last<T extends any[]> = T extends [...any, infer R] ? R : T;
+type Last<T extends any[]> = [any, ...T][T['length']];
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils';
